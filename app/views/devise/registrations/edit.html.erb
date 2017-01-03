@@ -4,6 +4,21 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+   <%= f.label :name %>
+   <%= f.text_field :name, placeholder: "Please enter your first and last name." %>
+  </div>
+
+  <div class="field">
+   <%= f.label :location %>
+   <%= f.text_field :location, placeholder: "Where do you currently live?" %>
+  </div>
+
+  <div class="field">
+   <%= f.label :bio %>
+   <%= f.text_field :bio, placeholder: "Tell us about yourself...in 500 characters or less." %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

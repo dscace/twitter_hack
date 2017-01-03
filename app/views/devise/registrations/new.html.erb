@@ -4,6 +4,16 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "Choose carefully, you won't be able to change this later." %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Please enter your first and last name." %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -19,6 +29,16 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location, placeholder: "Where do you currently live?" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_field :bio, cols: 4, placeholder: "Tell us about yourself...in 500 characters or less." %>
   </div>
 
   <div class="actions">
