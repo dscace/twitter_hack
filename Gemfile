@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'jquery-turbolinks'
 gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass', '~> 3.3.6'
