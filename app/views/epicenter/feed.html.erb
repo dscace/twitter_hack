@@ -1,12 +1,20 @@
-<h1><%= current_user.username %>'s Twitter Feed</h1>
+<% if user_signed_in? %>
 
-<p>Here is what your friends are saying:</p>
+<h1><%= current_user.username %>'s Feeds</h1>
 
-<div>
-	<%= @following_tweets.each do |tweet|%>
-		<div>
-			<p><%= tweet.message %></p>
-			<p><%= tweet.user.username %></p>
-		</div>	
-	<% end %>
-</div>
+    <% @following_tweets.each do |tweet| %>
+        <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <%= tweet.user.username %>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <%= tweet.message %>
+            </div>
+        </div>
+    <% end %>
+    <% else %>
+        <h1>Sign in/Sign up to view your feed!</h1>
+        <%= link_to "Sign In", new_user_session_path, class: 'btn btn-success btn-lg' %>
+<% end %>
