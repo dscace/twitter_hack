@@ -194,7 +194,7 @@ DEPENDENCIES
   jquery-turbolinks
   listen (~> 3.0.5)
   paperclip
-  pg (~> 0.18)
+  pg (~> 0.19)
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)

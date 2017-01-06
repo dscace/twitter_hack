@@ -37,6 +37,10 @@ class EpicenterController < ApplicationController
 
       current_user.save
   end
+
+  def tag_tweets
+    @tag = Tag.find(params[:id])
+  end
 end
 
 

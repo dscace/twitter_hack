@@ -1,0 +1,14 @@
+<h1><%= @tag.phrase %></h1>
+
+  <% @tag.tweet.each do |tweet| %>
+    <div class="row">
+      <div class="col-md-8 well">
+        <p>
+          <%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %> <!-- • <span>  <%= time_ago_in_words(tweet.created_at) %> ago</span> -->
+        </p>
+        <p class="well">
+          <%= tweet.message.html_safe %>
+        </p>
+      </div>
+    </div>
+  <% end %>

@@ -29,7 +29,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
 
-    get_tagged(@tweet)
+    create_tags(@tweet)
 
     respond_to do |format|
       if @tweet.save
