@@ -6,6 +6,7 @@
         <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
+                        <%= image_tag(tweet.user.avatar.url(:thumb)) %>
                         <%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %>
                     </h3>
                 </div>
