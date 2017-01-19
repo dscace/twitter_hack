@@ -4,6 +4,7 @@
 
   
 
+  <p><%= link_to 'New Tweet', new_tweet_path, class: "btn btn-danger" %></p>
   
   <% @tweets.each do |tweet| %>
     <div class="panel panel-primary">
@@ -30,6 +31,4 @@
 
  
 
-<br>
 
-<%= link_to 'New Tweet', new_tweet_path, class: "btn btn-danger" %>

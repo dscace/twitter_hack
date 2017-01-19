@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 
-<h1><%= current_user.username %>'s Feeds</h1>
+<h1><%= current_user.username %>'s Feed</h1>
 
     <% @following_tweets.each do |tweet| %>
         <div class="panel panel-primary">

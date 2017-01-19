@@ -15,3 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1, .navbar-header {
+	font-family: 'Poppins', sans-serif;
+}
