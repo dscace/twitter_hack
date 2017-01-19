@@ -16,10 +16,33 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-h1, .navbar-header {
-	font-family: 'Poppins', sans-serif;
+body {
+	background: url(sprinkles.jpg) no-repeat center center fixed;
+	font-family: helvetica;
 }
 
-body {
-	background-image: url(sprinkles.jpg) no-repeat center center fixed;
+.navbar {
+	background-color: rgba(255,255,255,0.9);
+}
+
+h1 {
+	font-family: 'Modak', cursive;
+	font-size: 70px;
+  color: white;
+  text-shadow:
+	  3px 3px 0 #000,
+	  -1px -1px 0 #000,  
+	  1px -1px 0 #000,
+	  -1px 1px 0 #000,
+	  1px 1px 0 #000;
+}
+
+h2 {
+	color: white;
+  text-shadow:
+	  3px 3px 0 #000,
+	  -1px -1px 0 #000,  
+	  1px -1px 0 #000,
+	  -1px 1px 0 #000,
+	  1px 1px 0 #000;
 }
