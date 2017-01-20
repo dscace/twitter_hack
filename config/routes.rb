@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'epicenter#feed'
+  root 'tweets#index'
 
   get 'show_user' => 'epicenter#show_user'
 

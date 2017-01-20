@@ -1,11 +1,32 @@
- <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <h1>Tweets</h1>
 
-  
 
-  <p><%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary" %></p>
+  <% if user_signed_in? %>
+
+    <p><%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary" %></p>
   
+    <% @tweets.each do |tweet| %>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <%= image_tag(tweet.user.avatar.url(:thumb)) %>
+            <%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <%= tweet.message.html_safe %>
+          <br />
+          <% if current_user.id == tweet.user_id %>
+              (<%= link_to 'Edit', edit_tweet_path(tweet) %> /
+              <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>)
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <% else %>
   <% @tweets.each do |tweet| %>
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -16,16 +37,10 @@
       </div>
       <div class="panel-body">
         <%= tweet.message.html_safe %>
-        <br />
-        <% if current_user.id == tweet.user_id %>
-            (<%= link_to 'Edit', edit_tweet_path(tweet) %> /
-            <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>)
-        <% end %>
       </div>
     </div>
   <% end %>
-
-      
+    
     
       
 
